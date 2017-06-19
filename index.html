@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Idea Box</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="reset.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class='main form'>
+        <h1><span id='idea'>idea</span><span id='box'>box</span></h1>
+        <input type='text' id='title' placeholder="Title">
+        <textarea type='text_area' id='body' placeholder="Body"></textarea>
+        <button id='save'>save</button>
+    </section>
+    <section class='container'>
+        <input type='text' id='search' placeholder="Search">
+        <section class='ideas'>
+            <div id='template' class='idea hidden'>
+                <div class='heading'>
+                    <h3>Example Idea</h3>
+                    <img class='delete' src="images/delete.svg" alt="delete">
+                </div>
+                <p class='idea-body'>This is an example of the body of an idea. It doesn't help me much now</p>
+                <div class='footer'>
+                    <img class='upvote' src="images/upvote.svg" alt="upvote">
+                    <img class='downvote' src="images/downvote.svg" alt="downvote">
+                    <h4>quality: <span>swill</span></h4>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src=script.js></script>
+</body>
+
+</html>
