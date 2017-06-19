@@ -35,6 +35,14 @@ textarea[type=text_area] {
     color: black;
 }
 
+.main h5 {
+    color: lightgray;
+    font-size: 12px;
+    margin-bottom: 15px;
+    position: relative;
+    left: 25%;
+}
+
 .main #body {
     height: 50px;
     color: black;

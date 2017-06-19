@@ -60,6 +60,11 @@ $(document).ready(function() {
     })
 })
 
+$('#body').on('keyup', function() {
+    var count = $(this).val().length
+    $('#ch-count').text(count);
+})
+
 $('#save').on('click', function() {
     var id = nextId();
     var entry = new Idea(id, title.val(), body.val());
