@@ -137,7 +137,9 @@ $('#search').on('keyup', function() {
     var param = $(this).val().toUpperCase();
     var ideas = $('.idea');
     for (var i = 0; i < ideas.length; i++) {
-        if (ideas[i].children[0].children[0].innerHTML.toUpperCase().includes(param) || ideas[i].children[1].innerHTML.toUpperCase().includes(param)) {
+        if (ideas[i].id === "template") {
+            return;
+        } else if (ideas[i].children[0].children[0].innerHTML.toUpperCase().includes(param) || ideas[i].children[1].innerHTML.toUpperCase().includes(param)) {
             ideas[i].classList.remove('hidden')
         } else {
             ideas[i].classList.add('hidden')
