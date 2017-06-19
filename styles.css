@@ -39,8 +39,6 @@ textarea[type=text_area] {
     color: lightgray;
     font-size: 12px;
     margin-bottom: 15px;
-    position: relative;
-    left: 25%;
 }
 
 .main #body {
@@ -117,7 +115,7 @@ textarea[type=text_area] {
 .footer {
     display: flex;
     justify-content: flex-start;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 5px;
 }
 
@@ -128,6 +126,7 @@ textarea[type=text_area] {
 .idea p {
     height: 20px;
     padding: 5px;
+    margin-bottom: 5px;
 }
 
 @media only screen and (min-width: 768px) {
