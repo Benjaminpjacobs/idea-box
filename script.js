@@ -4,8 +4,8 @@ $('#save').on('click', saveIdea).on('click', clearFields)
 $('#search').on('keyup', searchIdeas);
 $('.delete').on('click', deleteIdea)
 $('.upvote').on('click', qualitySwapper)
-$('.downvote').on('click', qualitySwapper)
 $('p').on('keyup', blurTextBox);
+$('.downvote').on('click', qualitySwapper)
 $('p').on('blur', saveNewText);
 
 var title = $('#title')
@@ -72,8 +72,8 @@ function charCount() {
 
 function deleteIdea() {
     var id = $(this).parent().parent().attr('id');
-    $(this).parent().parent().addClass('hidden');
     localStorage.removeItem(id);
+    $(this).parent().parent().remove();
 };
 
 function saveNewText(e) {
