@@ -8,7 +8,6 @@ $('.downvote').on('click', qualitySwapper)
 $('p').on('keyup', blurTextBox);
 $('p').on('blur', saveNewText);
 
-
 var title = $('#title')
 var body = $('#body')
 
@@ -77,7 +76,6 @@ function deleteIdea() {
     localStorage.removeItem(id);
 };
 
-
 function saveNewText(e) {
     var newBody = $(this).text();
     var id = $(this).parent().attr('id');
@@ -88,7 +86,7 @@ function saveNewText(e) {
 
 function blurTextBox(e) {
     var key = e.keyCode || e.charCode
-    if (key == 13)
+    if (key === 13)
         $(this).blur();
 }
 
@@ -106,36 +104,39 @@ function performSearch(param, ideas) {
     for (var i = 0; i < ideas.length; i++) {
         var body = ideas[i].getElementsByTagName('p')[0].textContent;
         var title = ideas[i].getElementsByTagName('h3')[0].textContent;
-        hideOrReveal(ideas, i, title, body, param)
+        hideOrReveal(ideas, i, title, body, param);
     }
 }
 
 function hideOrReveal(ideas, i, title, body, param) {
     if (ideas[i].id === "template") {
         return;
-    } else if (titleOrBodyIncludes(title, body, param)) {
-        ideas[i].classList.remove('hidden')
+    } else if (includesParam(title, body, param)) {
+        ideas[i].classList.remove('hidden');
     } else {
-        ideas[i].classList.add('hidden')
+        ideas[i].classList.add('hidden');
     }
 }
 
-function titleOrBodyIncludes(title, body, param) {
+function includesParam(title, body, param) {
     return title.toUpperCase().includes(param) || body.toUpperCase().includes(param)
 }
 
 function qualitySwapper(e) {
-    var $quality = $(this).siblings('h4').find('span')
-    var id = $(this).parent().parent().attr('id')
-    var idea = getFromStorage(id)
+    var $quality = $(this).siblings('h4').find('span');
+    var id = $(this).parent().parent().attr('id');
+    var idea = getFromStorage(id);
+    upOrDown(e, idea, $quality);
+    updateIdea(idea, id);
+    $quality.text(idea.quality)
+}
+
+function upOrDown(e, idea, $quality) {
     if (e.target.className === 'upvote') {
         idea.quality = qualities().up[$quality.text()]
     } else {
-        idea.quality = qualities().down[$quality.text()]
+        idea.quality = qualities().down[$quality.text()];
     }
-
-    updateIdea(idea, id);
-    $quality.text(idea.quality)
 }
 
 function qualities() {
