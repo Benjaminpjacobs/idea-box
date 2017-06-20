@@ -130,6 +130,38 @@ Bottom Section
     margin-bottom: 5px;
 }
 
+.idea button {
+    height: 22px;
+    width: 22px;
+    padding: 5px;
+    margin-right: 5px;
+    border-style: none;
+}
+
+.delete {
+    background: url('images/delete.svg') no-repeat;
+}
+
+.upvote {
+    background: url('images/upvote.svg') no-repeat;
+}
+
+.downvote {
+    background: url('images/downvote.svg') no-repeat;
+}
+
+.delete:hover {
+    background: url('images/delete-hover.svg') no-repeat;
+}
+
+.upvote:hover {
+    background: url('images/upvote-hover.svg') no-repeat;
+}
+
+.downvote:hover {
+    background: url('images/downvote-hover.svg') no-repeat;
+}
+
 .heading {
     display: flex;
     justify-content: space-between;
