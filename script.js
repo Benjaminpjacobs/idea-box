@@ -41,6 +41,7 @@ function nextId() {
 function clearFields() {
     title.val('');
     body.val('')
+    $('#ch-count').text(0);
 }
 
 function addIdea(entry) {

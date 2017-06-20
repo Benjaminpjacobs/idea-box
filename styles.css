@@ -1,7 +1,28 @@
-img {
-    height: 20px;
-    width: 20px;
+/*///////////////////////
+General
+///////////////////////*/
+
+.hidden {
+    display: none;
 }
+
+
+/*///////////////////////
+Logo
+///////////////////////*/
+
+#idea {
+    color: #00A79D
+}
+
+#box {
+    color: #6d6e71;
+}
+
+
+/*///////////////////////
+Top Section
+///////////////////////*/
 
 .main {
     background-color: #e5f3f2;
@@ -17,6 +38,12 @@ img {
     ;
 }
 
+.main h5 {
+    color: lightgray;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
 .main input[type=text],
 textarea[type=text_area] {
     display: block;
@@ -29,21 +56,14 @@ textarea[type=text_area] {
     color: black;
 }
 
-textarea[type=text_area] {
+.main textarea[type=text_area] {
     resize: none;
     padding-top: 5px;
     color: black;
 }
 
-.main h5 {
+::-webkit-input-placeholder {
     color: lightgray;
-    font-size: 12px;
-    margin-bottom: 15px;
-}
-
-.main #body {
-    height: 50px;
-    color: black;
 }
 
 .main button {
@@ -59,17 +79,15 @@ textarea[type=text_area] {
     background-color: #045e55;
 }
 
-::-webkit-input-placeholder {
-    color: lightgray;
+.main #body {
+    height: 50px;
+    color: black;
 }
 
-#idea {
-    color: #00A79D
-}
 
-#box {
-    color: #6d6e71;
-}
+/*///////////////////////
+Bottom Section
+///////////////////////*/
 
 .container input[type=text] {
     display: block;
@@ -106,6 +124,12 @@ textarea[type=text_area] {
     color: #6d6e71;
 }
 
+.idea p {
+    height: 20px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
 .heading {
     display: flex;
     justify-content: space-between;
@@ -123,11 +147,10 @@ textarea[type=text_area] {
     margin-right: 5px;
 }
 
-.idea p {
-    height: 20px;
-    padding: 5px;
-    margin-bottom: 5px;
-}
+
+/*///////////////////////
+Desktop Settings
+///////////////////////*/
 
 @media only screen and (min-width: 768px) {
     .main input[type=text],
@@ -150,8 +173,4 @@ textarea[type=text_area] {
         width: 60%;
         height: 35px;
     }
-}
-
-.hidden {
-    display: none;
 }
