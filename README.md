@@ -1,4 +1,4 @@
-# IdeaBox Pivot
+# IdeaBox
 
 The goal of this project was to create a basic CRUD application using Javascript and JQuery for a collection of ideas.
 
