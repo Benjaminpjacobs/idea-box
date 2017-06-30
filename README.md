@@ -1,5 +1,7 @@
 # IdeaBox
 
+![alt-text](https://raw.github.com/Benjaminpjacobs/idea-box/blob/master/screen-shots/idea-box.png?raw=true)
+
 The goal of this project was to create a basic CRUD application using Javascript and JQuery for a collection of ideas.
 
 ## Installation
